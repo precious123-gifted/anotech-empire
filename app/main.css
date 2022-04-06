@@ -1,0 +1,69 @@
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+body .view1 {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+body .view1 .navBar {
+  height: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 22px;
+  border-bottom: 2px solid #0046DC;
+  margin-bottom: 10px;
+}
+
+body .view1 .navBar .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 50%;
+}
+
+body .view1 header {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 2px solid #0046DC;
+  height: 87%;
+}
+
+body .view1 header .headerText {
+  width: 60%;
+  height: 100%;
+  background-color: #0046dc1c;
+}
+
+body .view1 header .headerText h1 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 550%;
+  margin-top: 0;
+}
+
+body .view1 header .headerImageDiv {
+  background: url("Rectangle 3.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  width: 40%;
+}
+/*# sourceMappingURL=main.css.map */
