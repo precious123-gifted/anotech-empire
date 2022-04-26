@@ -1,15 +1,10 @@
 body {
-  overflow: hidden;
+  overflow-y: hidden;
   margin: 0;
-}
-
-body .view1 {
-  overflow: hidden;
   height: 100vh;
-  width: 100%;
 }
 
-body .view1 .navBar {
+body .navBar {
   height: 13%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,13 +15,11 @@ body .view1 .navBar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 22px;
   border-bottom: 2px solid #0046DC;
   margin-bottom: 10px;
 }
 
-body .view1 .navBar .menu {
+body .navBar .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,31 +29,125 @@ body .view1 .navBar .menu {
   width: 50%;
 }
 
-body .view1 header {
-  overflow: hidden;
+body .navBar .menu .list {
+  position: relative;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 22px;
+  -webkit-box-shadow: inset 0 0 0 0 #54b3d6;
+          box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #0046DC;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+}
+
+body .navBar .menu .list::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #0046DC;
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+body .navBar .menu .list:hover::before {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+body .navBar .menu .list:hover {
+  -webkit-box-shadow: inset 100px 0 0 0 #0046DC;
+          box-shadow: inset 100px 0 0 0 #0046DC;
+  -webkit-transition: color .3s ease-in-out, -webkit-box-shadow .6s ease-in-out;
+  transition: color .3s ease-in-out, -webkit-box-shadow .6s ease-in-out;
+  transition: color .3s ease-in-out, box-shadow .6s ease-in-out;
+  transition: color .3s ease-in-out, box-shadow .6s ease-in-out, -webkit-box-shadow .6s ease-in-out;
+  color: white;
+}
+
+body .main {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 87%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .main .view0 {
+  height: 100%;
+  min-width: 100vw;
+  background-image: url(view0bg.png);
+  background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .main .view0 .about {
+  width: 70vw;
+  height: 80%;
+  background-color: #20306ec7;
+  color: #ffffff;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+body .main .view1 {
+  border-top: 2px solid #0046DC;
+  height: 100%;
+  min-width: 100vw;
+}
+
+body .main .view1 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: 2px solid #0046DC;
-  height: 87%;
+  height: 100%;
 }
 
-body .view1 header .headerText {
+body .main .view1 header .headerText {
   width: 60%;
   height: 100%;
   background-color: #0046dc1c;
 }
 
-body .view1 header .headerText h1 {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 550%;
+body .main .view1 header .headerText span {
+  font-family: 'Share Tech Mono', goblin;
+  font-size: 560%;
   margin-top: 0;
 }
 
-body .view1 header .headerImageDiv {
+body .main .view1 header .headerImageDiv {
   background: url("Rectangle 3.png");
   background-repeat: no-repeat;
   background-position: left bottom;
